@@ -1,0 +1,147 @@
+.contact-page {
+    display: grid;
+    grid-template-columns: 1fr 50rem;
+    height: 100%;
+
+    position: relative;
+    z-index: 10;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        right: -40px;
+        bottom: -40px;
+        background-image: url('/public/storage/photos/contact-background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.7;
+        z-index: -10;
+        box-shadow: 0 0 20px 20px $color-white inset;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        font-weight: 400;
+        margin: 5rem 3rem 0 3rem;
+    }
+
+    &__title {
+        font-size: $font-size-l;
+        font-weight: 600;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 3rem;
+    }
+
+
+    &__form {
+        position: relative;
+        display: grid;
+        padding: 3rem;
+        grid-template-rows: 1fr 1fr 40% 10%;
+        gap: 2.5rem;
+
+        align-self: center;
+        justify-self: center;
+        width: 90%;
+        height: 100%;
+
+        background-color: $color-white;
+        font-size: $font-size-xs;
+        border-radius: 15px;
+
+        box-shadow: 0 0 10px rgba($color-black, 0.2);
+    }
+
+    &__inputBx
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+    }
+    
+    &__input, &__textarea {
+        padding: 0.7rem;
+        
+        font-size: inherit;
+        font-family: inherit;
+        background-color: $color-very-light-grey;
+        border: none;
+        height: 100%;
+        resize: none;
+        border-bottom: 2px solid rgba($color:  $color-white, $alpha: 0);
+
+        transition: all 0.3s ease;
+
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid $color-main-blue;
+            color: $color-black;
+        }
+
+        &--error{
+            color: $color-red-message;
+            border-bottom: 2px solid rgba($color:  $color-red-message, $alpha: 0.8);
+        }
+
+        &--success {
+            border-bottom: 2px solid rgba($color:  $color-green-message, $alpha: 0.8);
+        }
+    }
+
+    &__error {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(90%);
+        opacity: 0;
+        width: 100%;
+        padding: 0.3rem;
+
+        font-size: $font-size-xs;
+        color: $color-red-message;
+        font-weight: 400;
+        border-radius: 0 0 5px 5px;
+
+        transition: all 0.3s ease;
+
+        &--active {
+            opacity: 1;
+        }
+    }
+
+    &__success-message {
+        position: absolute;
+        display: flex;
+        text-align: center;
+
+        width: 50%;
+        bottom: 2rem;
+        right: 3rem;
+
+        padding: 1rem;
+
+        color: $color-green-message;
+        font-weight: 600;
+        opacity: 0;
+
+        transition: opacity .3s ease;
+
+        &--active {
+            opacity: 1;
+        }
+    }
+}

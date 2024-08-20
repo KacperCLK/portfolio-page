@@ -1,0 +1,35 @@
+// Import styles for layout components
+@import 'header';
+@import 'footer';
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: $color-layout-blue;
+    
+    &__card{
+        display: grid;
+        grid-template-rows: 6.5rem 51.8rem 6.5rem;
+
+        height: 64.8rem;
+        width: 115.2rem;
+
+        font-size: $font-size-s;
+        font-weight: 300;
+
+        background-color: $color-white;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 2px rgba($color-grey, 0.1); /* Szary cień z rozmyciem */
+    }
+
+    &__content {
+        position: relative;
+        height: 100%;
+        padding: 4rem 8rem ;
+    }
+}

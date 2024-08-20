@@ -1,0 +1,20 @@
+.button{
+    border: none;
+    font-size: inherit;
+    cursor: pointer;
+
+    &--contact-button{
+        width: 30%;
+    
+        background-color: $color-main-blue;
+        color: $color-white;
+    
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    
+        &:hover {
+            background-color: $color-main-blue-dark;
+            color: $color-main-gold;
+        }
+    }
+}

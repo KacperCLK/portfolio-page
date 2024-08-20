@@ -1,0 +1,77 @@
+.skills-page-bg-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        right: 0rem;
+        bottom: -6rem;
+        background-image: url('/public/storage/photos/skills-background2.jpg');
+        filter: blur(5px);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.3;
+    }
+}
+
+.skills-page {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 5%;
+    height: 100%;
+    padding: 4rem;
+    overflow: auto;
+
+    position: relative;
+    z-index: 10;
+
+    &__skill {
+        height: 7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__section{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    &__skill-title {
+        font-size: $font-size-m;
+        font-weight: 500;
+    }
+
+    &__skill-description {
+        font-size: $font-size-xs;
+        font-weight: 300;
+    }
+
+    &__progress-bar {
+        grid-column: 1 / 3;
+
+        width: 100%;
+        height: 1.8rem;
+
+        background-color: $color-very-light-grey;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    &__progress {
+        height: 100%;
+        width: 0;
+        background-color: $color-main-blue;
+        border-radius: 5px 0 0 5px;
+    }
+}
