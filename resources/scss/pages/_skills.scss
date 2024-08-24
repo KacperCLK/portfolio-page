@@ -25,26 +25,38 @@
 
 .skills-page {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
-    gap: 5%;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: 5rem 1fr;
+    gap: 5% 0;
+    
     height: 100%;
-    padding: 4rem;
-    overflow: auto;
+    overflow: hidden;
 
     position: relative;
     z-index: 10;
 
+    .main-title {
+        grid-column: 1/-1;
+    }
+
     &__skill {
-        height: 7rem;
         display: flex;
         flex-direction: column;
+        height: 8rem;
         justify-content: space-between;
     }
 
     &__section{
-        display: flex;
-        flex-direction: column;
+        grid-row: 2;
+        display: grid;
         gap: 2rem;
+        align-content: start;
+        
+        height: 40rem;
+        padding-right: 2rem;
+        margin-right: 2rem;
+        
+        overflow-y: auto;
     }
     
     &__skill-title {

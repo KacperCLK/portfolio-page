@@ -1,3 +1,4 @@
 import './bootstrap';
-import './progress-bar';
 import './contact-errors';
+import './progress-bar';
+import './filters-worksPage';

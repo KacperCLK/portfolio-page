@@ -3,8 +3,11 @@
 @section('title', 'Kacper Celak - Skills Page')
 
 @section('content')
-<div class="skills-page-bg-img"></div>
+{{-- <div class="skills-page-bg-img"></div> --}}
 <div class="skills-page">
+    <h1 class="main-title thickness-400">
+        My <span class="font-colot-main-blue ">Skills</span>
+    </h1>
     @foreach ($sections as $section)
         <div class="skills-page__section">
             @foreach ($skills as $skill)

@@ -46,7 +46,7 @@
 
     </div>
 
-    <button class="contact-page__button button button--contact-button" type="submit">Submit</button>
+    <button class="contact-page__button button button--main-button" type="submit">Submit</button>
 
     
     <div class="contact-page__success-message @if (session()->has('success')) contact-page__success-message--active @endif">

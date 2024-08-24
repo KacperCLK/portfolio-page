@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\LinkService;
 use App\Models\Skill;
+use App\Models\Work;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -32,6 +33,9 @@ class PageController extends Controller
     }
     public function works()
     {
-        return view('pages.works', ['links' => $this->linkService->getLinks('works')]);
+        $works = Work::all();
+        $sections = Work::pluck('section')->unique()->filter();
+
+        return view('pages.works', ['links' => $this->linkService->getLinks('works'), 'works' => $works, 'sections' => $sections]);
     }
 }

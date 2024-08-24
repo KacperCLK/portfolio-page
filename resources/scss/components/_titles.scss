@@ -1,0 +1,19 @@
+.main-title {
+    position: relative;
+    justify-self: center;
+    text-transform: uppercase;
+
+    &::before {
+        content: '';
+        position: absolute;
+        
+        width: 40%;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        
+        background-color: $color-main-blue;
+        
+        transform: translateX(-50%);
+    }
+}

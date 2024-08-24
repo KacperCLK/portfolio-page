@@ -14,7 +14,7 @@
     
     &__card{
         display: grid;
-        grid-template-rows: 6.5rem 51.8rem 6.5rem;
+        grid-template-rows: 6.5rem 1fr;
 
         height: 64.8rem;
         width: 115.2rem;
@@ -31,5 +31,6 @@
         position: relative;
         height: 100%;
         padding: 4rem 8rem ;
+        overflow-y:hidden;
     }
 }
