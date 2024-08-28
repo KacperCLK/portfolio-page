@@ -2,6 +2,11 @@
     position: relative;
     justify-self: center;
     text-transform: uppercase;
+    font-size: $font-size-xl;
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: $font-size-l;
+    }
 
     &::before {
         content: '';

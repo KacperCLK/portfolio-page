@@ -8,7 +8,7 @@
             <span>Hi,</span>
             <span>I'am <span class="font-colot-main-blue thickness-600">Kacper</span></span>
             <span>Constructor Estimator and</span>
-            <span>Web Designer</span>
+            <span>Web Developer</span>
 
             <div class="home-page__link">
                 <a href="{{route('contact')}}" class="link link--button thickness-500">Contact</a>

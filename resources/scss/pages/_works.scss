@@ -3,17 +3,39 @@
     display: grid;
     grid-template-rows: 5rem 7rem 1fr;
     gap: 2rem;
+    
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 5rem 3rem 1fr;
+        max-height: 40rem;
+    }
 
     &__filters-container {
         display: flex;
         gap: 2rem;    
         justify-self: center;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: $font-size-xxs;
+        }
     }
 
     &__works-container {
         display: grid;
         grid-template-columns: repeat(4, 25%);
         overflow: auto;
+        
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, 33%);
+        }
+
+                
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(2, 50%);
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(1, 100%);
+        }
     }
 
     &__work {
@@ -21,10 +43,14 @@
         display: flex;
         margin: 1rem;
         height: 15rem;
-
+        
         cursor: pointer;
-
+        
         transition: all .3s ease;
+        
+        @media only screen and (max-width: $bp-large) {
+            height: 12rem;
+        }
         
         img {
             position: absolute;

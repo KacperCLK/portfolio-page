@@ -9,6 +9,7 @@
 
     height: 100vh;
     width: 100vw;
+    overflow-y: auto;
 
     background-color: $color-layout-blue;
     
@@ -24,13 +25,32 @@
 
         background-color: $color-white;
         border-radius: 20px;
-        box-shadow: 0 0 10px 2px rgba($color-grey, 0.1); /* Szary cień z rozmyciem */
+        box-shadow: 0 0 10px 2px rgba($color-grey, 0.1);
+        
+        @media only screen and (max-width: $bp-largest) {
+            width: 100%;
+            border-radius: 0;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            @media only screen and (max-height: $bp-small) {
+                height: 100%;
+            }
+        }
     }
 
     &__content {
         position: relative;
         height: 100%;
-        padding: 4rem 8rem ;
-        overflow-y:hidden;
+        padding: 4rem 8rem;
+        overflow: hidden;
+        
+        @media only screen and (max-width: $bp-large) {
+            padding: 2rem;
+            
+            @media only screen and (max-height: $bp-small) {
+                padding: 2rem;
+            }
+        }
     }
 }

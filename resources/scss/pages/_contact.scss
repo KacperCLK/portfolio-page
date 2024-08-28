@@ -1,10 +1,21 @@
 .contact-page {
     display: grid;
-    grid-template-columns: 1fr 50rem;
+    grid-template-columns: 50% 50%;
     height: 100%;
-
+    width: 100%;
+    
     position: relative;
     z-index: 10;
+    overflow: hidden;
+    
+    @media only screen and (max-width: $bp-large) {
+        // grid-template-columns: 1fr 40rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 12rem 1fr;
+    }
 
     &::before{
         content: '';
@@ -20,6 +31,10 @@
         opacity: 0.35;
         z-index: -10;
         border-radius: 20px;
+
+        @media only screen and (max-width: $bp-small) {
+            background-image: none;
+        }
     }
 
     &__info {
@@ -28,11 +43,27 @@
 
         font-weight: 400;
         margin: 5rem 3rem 0 3rem;
+        
+        @media only screen and (max-width: $bp-large) {
+            margin: 5rem 1rem 0 1rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 0rem;
+        }
     }
 
     &__title {
         font-size: $font-size-l;
         font-weight: 600;
+        
+        @media only screen and (max-width: $bp-medium) {
+            font-size: $font-size-m;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-s;
+        }
     }
 
     &__description {
@@ -40,112 +71,14 @@
         flex-direction: column;
         gap: 0.5rem;
         margin-top: 3rem;
-    }
 
-
-    &__form {
-        position: relative;
-        display: grid;
-        padding: 3rem;
-        grid-template-rows: 1fr 1fr 40% 10%;
-        gap: 2.5rem;
-
-        align-self: center;
-        justify-self: center;
-        width: 90%;
-        height: 90%;
-
-        background-color: $color-white;
-        font-size: $font-size-xs;
-        border-radius: 15px;
-
-        box-shadow: 0 0 10px rgba($color-black, 0.2);
-
-        button {
-            width: 30%;
-        }
-    }
-
-    &__inputBx
-    {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-
-        label {
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-        }
-    }
-    
-    &__input, &__textarea {
-        padding: 0.7rem;
-        
-        font-size: inherit;
-        font-family: inherit;
-        background-color: $color-very-light-grey;
-        border: none;
-        height: 100%;
-        resize: none;
-        border-bottom: 2px solid rgba($color:  $color-white, $alpha: 0);
-
-        transition: all 0.3s ease;
-
-        &:focus{
-            outline: none;
-            border-bottom: 2px solid $color-main-blue;
-            color: $color-black;
+        @media only screen and (max-width: $bp-medium) {
+            margin: 0;
+            font-size: $font-size-xs;
         }
 
-        &--error{
-            color: $color-red-message;
-            border-bottom: 2px solid rgba($color:  $color-red-message, $alpha: 0.8);
-        }
-
-        &--success {
-            border-bottom: 2px solid rgba($color:  $color-green-message, $alpha: 0.8);
-        }
-    }
-
-    &__error {
-        position: absolute;
-        bottom: 0;
-        transform: translateY(90%);
-        opacity: 0;
-        width: 100%;
-        padding: 0.3rem;
-
-        font-size: $font-size-xs;
-        color: $color-red-message;
-        font-weight: 400;
-        border-radius: 0 0 5px 5px;
-
-        transition: all 0.3s ease;
-
-        &--active {
-            opacity: 1;
-        }
-    }
-
-    &__success-message {
-        position: absolute;
-        display: flex;
-        text-align: center;
-
-        width: 50%;
-        bottom: 2rem;
-        right: 3rem;
-
-        padding: 1rem;
-
-        color: $color-green-message;
-        font-weight: 600;
-        opacity: 0;
-
-        transition: opacity .3s ease;
-
-        &--active {
-            opacity: 1;
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-xs;
         }
     }
 }

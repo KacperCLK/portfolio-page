@@ -9,13 +9,34 @@
     
     border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.2);
     
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: $font-size-s;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: $font-size-xs;
+        padding: 1rem;
+    }
+
     &__links {
         color: $color-light-grey;
         display: flex;
         gap: 2rem;
+        
+        @media only screen and (max-width: $bp-largest) {
+            gap: 0rem;
+        }
     }
 
     &__link {
         padding: 0.5rem 1rem;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            padding: .5rem;
+        }
     }
 }

@@ -31,12 +31,47 @@
     
     height: 100%;
     overflow: hidden;
-
+    
     position: relative;
     z-index: 10;
+    
+    @media only screen and (max-width: $bp-small) {
+        display: flex;
+        flex-direction: column;  
+        height: inherit;
+        overflow: auto;  
+    }
 
     .main-title {
         grid-column: 1/-1;
+        
+        @media only screen and (max-width: $bp-small) {
+            align-self: center;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            align-self: flex-start;
+        }
+        
+    }
+
+    &__section{
+        display: grid;
+        gap: 2rem;
+        align-content: start;
+        max-height: 40rem;
+        
+        height: 100%;
+        padding-right: 2rem;
+        margin-right: 2rem;
+        
+        overflow: auto;
+
+        @media only screen and (max-width: $bp-small) {
+            height: fit-content;
+            max-height: none;
+            overflow: initial;
+        }
     }
 
     &__skill {
@@ -44,29 +79,29 @@
         flex-direction: column;
         height: 8rem;
         justify-content: space-between;
-    }
 
-    &__section{
-        grid-row: 2;
-        display: grid;
-        gap: 2rem;
-        align-content: start;
-        
-        height: 40rem;
-        padding-right: 2rem;
-        margin-right: 2rem;
-        
-        overflow-y: auto;
+        @media only screen and (max-width: $bp-smallest) {
+            height: auto;
+            gap: .5rem;
+        }
     }
     
     &__skill-title {
         font-size: $font-size-m;
         font-weight: 500;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-s;
+        }
     }
 
     &__skill-description {
         font-size: $font-size-xs;
         font-weight: 300;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-xxs;
+        }
     }
 
     &__progress-bar {
@@ -78,6 +113,10 @@
         background-color: $color-very-light-grey;
         border-radius: 5px;
         overflow: hidden;
+
+        @media only screen and (max-width: $bp-smallest) {
+            height: 1.5rem;
+        }
     }
 
     &__progress {
