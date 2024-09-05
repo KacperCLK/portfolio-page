@@ -6,34 +6,27 @@
     
     position: relative;
     z-index: 10;
-    overflow: hidden;
     
     @media only screen and (max-width: $bp-large) {
-        // grid-template-columns: 1fr 40rem;
-    }
-
-    @media only screen and (max-width: $bp-medium) {
         grid-template-columns: 1fr;
-        grid-template-rows: 12rem 1fr;
+        height: fit-content;
     }
 
-    &::before{
-        content: '';
-        position: absolute;
-        top: -4rem;
-        left: -8rem;
-        right: -8rem;
-        bottom: -4rem;
-        background-image: url('/public/storage/photos/contact-background.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.35;
-        z-index: -10;
-        border-radius: 20px;
-
-        @media only screen and (max-width: $bp-small) {
-            background-image: none;
+    @media only screen and (min-width: $bp-large) {
+        &::before{
+            content: '';
+            position: absolute;
+            top: -4rem;
+            left: -8rem;
+            right: -8rem;
+            bottom: -4rem;
+            background-image: url('/public/storage/photos/contact-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.35;
+            z-index: -10;
+            border-radius: 20px;
         }
     }
 
@@ -43,42 +36,22 @@
 
         font-weight: 400;
         margin: 5rem 3rem 0 3rem;
-        
-        @media only screen and (max-width: $bp-large) {
-            margin: 5rem 1rem 0 1rem;
-        }
 
-        @media only screen and (max-width: $bp-medium) {
-            margin: 0rem;
+        @media only screen and (max-width: $bp-small) {
+            text-align: center;
+            margin: 0;
+            font-size: $font-size-xs;
         }
     }
 
     &__title {
-        font-size: $font-size-l;
-        font-weight: 600;
-        
-        @media only screen and (max-width: $bp-medium) {
-            font-size: $font-size-m;
-        }
-
-        @media only screen and (max-width: $bp-smallest) {
-            font-size: $font-size-s;
-        }
+        margin-bottom: 3rem;
+        align-self: center;
     }
 
     &__description {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        margin-top: 3rem;
-
-        @media only screen and (max-width: $bp-medium) {
-            margin: 0;
-            font-size: $font-size-xs;
-        }
-
-        @media only screen and (max-width: $bp-smallest) {
-            font-size: $font-size-xs;
-        }
     }
 }

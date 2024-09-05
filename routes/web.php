@@ -11,3 +11,4 @@ Route::get('/', function () {
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/skills', [PageController::class, 'skills'])->name('skills');
 Route::get('/works', [PageController::class, 'works'])->name('works');
+Route::get('/mobile', [PageController::class, 'mobile'])->name('mobile');

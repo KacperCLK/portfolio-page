@@ -3,10 +3,6 @@
     "file": "assets/contact-background-Ad4x3TXr.jpg",
     "src": "public/storage/photos/contact-background.jpg"
   },
-  "public/storage/photos/skills-background2.jpg": {
-    "file": "assets/skills-background2-w7f5gKTp.jpg",
-    "src": "public/storage/photos/skills-background2.jpg"
-  },
   "resources/css/app.css": {
     "file": "assets/app-l0sNRNKZ.js",
     "name": "app",
@@ -14,13 +10,13 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-CVN3HjLA.js",
+    "file": "assets/app-DnF7WrBR.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-Cmh1hAwd.css",
+    "file": "assets/app-CexxrzkZ.css",
     "src": "resources/scss/app.scss",
     "isEntry": true
   }

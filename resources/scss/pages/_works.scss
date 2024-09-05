@@ -5,17 +5,18 @@
     gap: 2rem;
     
     @media only screen and (max-width: $bp-large) {
-        grid-template-rows: 5rem 3rem 1fr;
-        max-height: 40rem;
+        grid-template-rows: auto 3rem 1fr;
+        height: fit-content;
     }
 
     &__filters-container {
         display: flex;
         gap: 2rem;    
         justify-self: center;
-
-        @media only screen and (max-width: $bp-large) {
-            font-size: $font-size-xxs;
+        font-size: $font-size-xxs;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            gap: 0.8rem;    
         }
     }
 
@@ -24,16 +25,16 @@
         grid-template-columns: repeat(4, 25%);
         overflow: auto;
         
-        @media only screen and (max-width: $bp-medium) {
-            grid-template-columns: repeat(3, 33%);
-        }
-
-                
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-large) {
+            grid-auto-rows: 20rem;
             grid-template-columns: repeat(2, 50%);
         }
 
         @media only screen and (max-width: $bp-small) {
+            grid-auto-rows: 15rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
             grid-template-columns: repeat(1, 100%);
         }
     }
@@ -49,7 +50,7 @@
         transition: all .3s ease;
         
         @media only screen and (max-width: $bp-large) {
-            height: 12rem;
+            height: auto;
         }
         
         img {
@@ -74,6 +75,7 @@
     
     &__work-title {
         display: flex;
+        position: relative;
         
         width: 100%;
         padding: 0 1rem;
@@ -82,7 +84,8 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        
+
+        font-size: $font-size-xs;
         color: $color-white;
         background-color: rgba($color: #000, $alpha: 0.7);
         border-radius: 10px;
@@ -103,6 +106,8 @@
         z-index: 10;
         padding: 0.5rem 0;
         width: 60%;
+
+        font-size: $font-size-xs;
 
         transition: all 0.3s ease;
     }

@@ -1,76 +1,80 @@
-.skills-page-bg-img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+// .skills-page-bg-img {
+//     position: absolute;
+//     height: 100%;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
 
-    z-index: 0;
+//     z-index: 0;
     
-    &::before{
-        content: '';
-        position: absolute;
-        top: 0rem;
-        left: 0rem;
-        right: 0rem;
-        bottom: -6rem;
-        background-image: url('/public/storage/photos/skills-background2.jpg');
-        filter: blur(5px);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.3;
-    }
-}
+//     &::before{
+//         content: '';
+//         position: absolute;
+//         top: 0rem;
+//         left: 0rem;
+//         right: 0rem;
+//         bottom: -6rem;
+//         background-image: url('/public/storage/photos/skills-background2.jpg');
+//         filter: blur(5px);
+//         background-size: cover;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         opacity: 0.3;
+//     }
+// }
 
 .skills-page {
     display: grid;
     grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: 5rem 1fr;
+    grid-template-rows: auto 1fr;
     gap: 5% 0;
     
     height: 100%;
     overflow: hidden;
     
+    
     position: relative;
     z-index: 10;
     
-    @media only screen and (max-width: $bp-small) {
-        display: flex;
-        flex-direction: column;  
-        height: inherit;
-        overflow: auto;  
+    @media only screen and (max-width: $bp-large) {
+        gap: 0;
+        height: fit-content;
+        overflow: visible;
     }
 
-    .main-title {
-        grid-column: 1/-1;
-        
-        @media only screen and (max-width: $bp-small) {
-            align-self: center;
-        }
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: 1fr;
+    }
 
-        @media only screen and (max-width: $bp-smallest) {
-            align-self: flex-start;
-        }
-        
+    &__title {
+        grid-column: 1/-1; 
+        margin-bottom: 3rem;
     }
 
     &__section{
         display: grid;
         gap: 2rem;
-        align-content: start;
         max-height: 40rem;
         
         height: 100%;
-        padding-right: 2rem;
-        margin-right: 2rem;
+        padding: 0 1rem;
+        margin: 0 1rem;
         
         overflow: auto;
 
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-large) {
             height: fit-content;
-            max-height: none;
-            overflow: initial;
+            max-height: fit-content;
+            overflow: visible;
+
+            padding-right: 1rem;
+            margin-right: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            gap: 2rem;
+            padding: 0;
+            margin: 2rem 0;
         }
     }
 
@@ -80,9 +84,15 @@
         height: 8rem;
         justify-content: space-between;
 
-        @media only screen and (max-width: $bp-smallest) {
+        @media only screen and (max-width: $bp-medium-small) {
             height: auto;
-            gap: .5rem;
+            gap: .4rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 0.5rem;
         }
     }
     
@@ -90,17 +100,21 @@
         font-size: $font-size-m;
         font-weight: 500;
 
-        @media only screen and (max-width: $bp-smallest) {
+        @media only screen and (max-width: $bp-medium-small) {
             font-size: $font-size-s;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: $font-size-xs;
         }
     }
 
     &__skill-description {
         font-size: $font-size-xs;
         font-weight: 300;
-
-        @media only screen and (max-width: $bp-smallest) {
-            font-size: $font-size-xxs;
+        
+        @media only screen and (max-width: $bp-medium-small) {
+            display: none;
         }
     }
 
@@ -114,8 +128,12 @@
         border-radius: 5px;
         overflow: hidden;
 
+        @media only screen and (max-width: $bp-medium-small) {
+            height: 1.2rem;
+        }
+
         @media only screen and (max-width: $bp-smallest) {
-            height: 1.5rem;
+            width: 60%;
         }
     }
 

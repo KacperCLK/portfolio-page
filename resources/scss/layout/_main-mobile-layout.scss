@@ -1,0 +1,35 @@
+@import 'header';
+@import 'footer';
+
+.mobile-layout {
+
+    &__container {
+        display: flex;
+        background-color: $color-layout-blue;
+        justify-content: center;
+    }
+    
+    &__content {
+        display: grid;
+        gap: 5rem;
+        
+        width: 90%;
+        margin: 3% 5%;
+        padding: 5rem;
+        overflow: auto;
+
+        font-size: $font-size-s;
+        background-color: $color-white;
+        border-radius: 15px;
+        
+        box-shadow: 0 0 25px rgba(0, 0, 0, .3);
+        
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            margin: 0;
+            padding: 3rem;
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+}

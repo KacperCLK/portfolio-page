@@ -6,6 +6,7 @@ use App\LinkService;
 use App\Models\Skill;
 use App\Models\Work;
 use Illuminate\Http\Request;
+use Jenssegers\Agent\Agent;
 
 class PageController extends Controller
 {
@@ -14,6 +15,15 @@ class PageController extends Controller
     public function __construct(LinkService $linkService){
         // Metoda służąca do generowania linków - logika w Service - "LinkService.php"
         $this->linkService  = $linkService;
+    }
+
+    public function mobile()
+    {
+        $skills = Skill::all();
+        $works = Work::all();
+        $sections = Skill::pluck('section')->unique()->filter();
+
+        return view('pages.mobile', ['links' => $this->linkService->getLinks('mobile'), 'works' => $works, 'skills' => $skills, 'sections' => $sections]);
     }
 
     public function contact()
