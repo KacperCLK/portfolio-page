@@ -9,6 +9,11 @@
         height: fit-content;
     }
 
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: auto 3rem 1fr;
+        height: fit-content;
+    }
+
     &__filters-container {
         display: flex;
         gap: 2rem;    

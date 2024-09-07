@@ -18,12 +18,22 @@ class LinkService
 
         $links = [];
 
-        foreach ($pages as $slug => $name) {
-            $links[] = [
-                'name' => $name,
-                'url' => route($slug),
-                'active' => $slug === $activePage,
-            ];
+        if ($activePage === 'mobile') {
+            foreach ($pages as $slug => $name) {
+                $links[] = [
+                    'name' => $name,
+                    'url' => '#' . $slug,
+                    'active' => "",
+                ];
+            }
+        }else{
+            foreach ($pages as $slug => $name) {
+                $links[] = [
+                    'name' => $name,
+                    'url' => route($slug),
+                    'active' => $slug === $activePage,
+                ];
+            }
         }
 
         return $links;

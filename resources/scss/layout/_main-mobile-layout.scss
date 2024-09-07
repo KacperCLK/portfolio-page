@@ -2,7 +2,6 @@
 @import 'footer';
 
 .mobile-layout {
-
     &__container {
         display: flex;
         background-color: $color-layout-blue;
@@ -10,26 +9,52 @@
     }
     
     &__content {
+        position: relative;
         display: grid;
-        gap: 5rem;
         
         width: 90%;
         margin: 3% 5%;
-        padding: 5rem;
-        overflow: auto;
 
         font-size: $font-size-s;
         background-color: $color-white;
-        border-radius: 15px;
         
         box-shadow: 0 0 25px rgba(0, 0, 0, .3);
         
         @media only screen and (max-width: $bp-medium) {
             width: 100%;
             margin: 0;
-            padding: 3rem;
             border-radius: 0;
             box-shadow: none;
+        }
+    }
+
+    &__section {
+        padding: 8rem 5rem;
+        
+        @media only screen and (max-width: $bp-medium) {
+            padding: 6rem 3rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 4.5rem 2rem;
+        }
+
+        &--2 {
+            background-color: $color-very-light-grey;
+            clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+
+            @media only screen and (max-width: $bp-smallest) {
+                clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+            }    
+        }
+        
+        &--last {
+            background-color: $color-very-light-grey;
+            clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 100%);
+
+            @media only screen and (max-width: $bp-smallest) {
+                clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+            }  
         }
     }
 }

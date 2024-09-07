@@ -1,4 +1,4 @@
-<div class="works">
+<div id="works" class="works">
     <h1 class="works-page__title main-title thickness-400">
         My <span class="font-colot-main-blue ">Works</span>
     </h1>

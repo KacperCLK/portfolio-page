@@ -1,5 +1,5 @@
 {{-- <div class="skills-page-bg-img"></div> --}}
-<div class="skills-page">
+<div id="skills" class="skills-page">
     <h1 class="skills-page__title main-title thickness-400">
         My <span class="font-colot-main-blue ">Skills</span>
     </h1>

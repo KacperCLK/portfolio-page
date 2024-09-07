@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     padding: 0 8rem;
     
@@ -8,9 +8,21 @@
     font-size: $font-size-s-m;
     
     border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.2);
-    
-    @media only screen and (max-width: $bp-small) {
-        padding: 0 2rem;
+
+    &--scrolled {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: $color-white;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1rem;
     }
 
     @media only screen and (max-width: $bp-small) {
@@ -19,7 +31,6 @@
 
     @media only screen and (max-width: $bp-smallest) {
         font-size: $font-size-xs;
-        padding: 1rem;
     }
 
     &__links {
@@ -29,6 +40,11 @@
         
         @media only screen and (max-width: $bp-largest) {
             gap: 0rem;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            justify-content: space-evenly;
+            width: 100%;
         }
     }
 

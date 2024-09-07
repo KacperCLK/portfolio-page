@@ -1,5 +1,5 @@
 <div class="header">
-    <span>Kacper</span>
+    {{-- <span>Kacper Celak</span> --}}
 
     <div class="header__links">
         @foreach ($links as $link)

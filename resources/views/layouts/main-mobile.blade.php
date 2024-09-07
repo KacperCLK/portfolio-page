@@ -20,13 +20,11 @@
 
 <body>
     <div class="mobile-layout__container">
-        {{-- @include('layouts.header') --}}
 
         <div class="mobile-layout__content">
             @yield('content')
         </div>
         
-        {{-- @include('layouts.footer') --}}
     </div>
     
     @livewireScripts

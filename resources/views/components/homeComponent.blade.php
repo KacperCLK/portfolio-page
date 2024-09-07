@@ -1,4 +1,4 @@
-<div class="home-page thickness-500">
+<div id="home" class="home-page thickness-500">
     <h1 class="home-page__title main-title thickness-400">
         <span class="font-colot-main-blue ">About</span> Me
     </h1>
