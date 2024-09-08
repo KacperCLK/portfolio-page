@@ -20,7 +20,7 @@
                 <div class="works__work-title thickness-600">
                     <span>{{ $work->name }}</span>
                 </div>
-                <a href="{{ $work->work_url }}" class="works__show-details button button--main-button thickness-400">Details</a>
+                <a href="{{ route('works.show', ['project_name' => $work->work_url]) }}" class="works__show-details button button--main-button thickness-400">Details</a>
             </div>
         @endforeach
     </div>

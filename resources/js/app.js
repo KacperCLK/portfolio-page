@@ -5,6 +5,3 @@ import './filters-worksPage';
 import './header-behavior';
 import './progress-bar';
 import './scroll-with-anchors';
-
-
-
