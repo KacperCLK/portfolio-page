@@ -9,15 +9,36 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
+  "resources/css/worksPagesCSS/app.css": {
+    "file": "assets/app-DP2rzg_V.js",
+    "name": "app",
+    "src": "resources/css/worksPagesCSS/app.css",
+    "isEntry": true
+  },
   "resources/js/app.js": {
-    "file": "assets/app-Cgn6O5o3.js",
+    "file": "assets/app-XN6ObUGq.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-ra12Jqpq.css",
+    "file": "assets/app-D6TcoUSS.css",
     "src": "resources/scss/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/worksPagesSCSS/natours/app.scss": {
+    "file": "assets/app-Bi-outcV.css",
+    "src": "resources/scss/worksPagesSCSS/natours/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/worksPagesSCSS/nexter/app.scss": {
+    "file": "assets/app-Al8W_TRd.css",
+    "src": "resources/scss/worksPagesSCSS/nexter/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/worksPagesSCSS/trillo/app.scss": {
+    "file": "assets/app-yv8ZP8Pa.css",
+    "src": "resources/scss/worksPagesSCSS/trillo/app.scss",
     "isEntry": true
   }
 }
