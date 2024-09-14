@@ -7,18 +7,34 @@
     "file": "assets/contact-background-Ad4x3TXr.jpg",
     "src": "public/storage/photos/contact-background.jpg"
   },
+  "public/storage/photos/works-page/natours/nat-10.jpg": {
+    "file": "assets/nat-10-BdCmwXt_.jpg",
+    "src": "public/storage/photos/works-page/natours/nat-10.jpg"
+  },
+  "public/storage/photos/works-page/natours/nat-4.jpg": {
+    "file": "assets/nat-4-Bw1Lr8fy.jpg",
+    "src": "public/storage/photos/works-page/natours/nat-4.jpg"
+  },
   "public/storage/photos/works-page/natours/nat-5.jpg": {
     "file": "assets/nat-5-ChjGwgv6.jpg",
     "src": "public/storage/photos/works-page/natours/nat-5.jpg"
   },
+  "public/storage/photos/works-page/natours/nat-6.jpg": {
+    "file": "assets/nat-6-BQ_1IDva.jpg",
+    "src": "public/storage/photos/works-page/natours/nat-6.jpg"
+  },
+  "public/storage/photos/works-page/natours/nat-7.jpg": {
+    "file": "assets/nat-7-DwY2S5C1.jpg",
+    "src": "public/storage/photos/works-page/natours/nat-7.jpg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-l0sNRNKZ.js",
+    "file": "assets/app-DP2rzg_V.js",
     "name": "app",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/worksPagesCSS/app.css": {
-    "file": "assets/app-DP2rzg_V.js",
+    "file": "assets/app-l0sNRNKZ.js",
     "name": "app",
     "src": "resources/css/worksPagesCSS/app.css",
     "isEntry": true
@@ -47,7 +63,7 @@
     "isEntry": true
   },
   "resources/scss/worksPagesSCSS/natours/app.scss": {
-    "file": "assets/app-TSuZymsw.css",
+    "file": "assets/app-Ds6-Gb5g.css",
     "src": "resources/scss/worksPagesSCSS/natours/app.scss",
     "isEntry": true
   },
