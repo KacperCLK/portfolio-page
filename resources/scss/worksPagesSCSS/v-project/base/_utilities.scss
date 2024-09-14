@@ -1,0 +1,57 @@
+.u-margin-bottom-huge {
+    margin-bottom: 10rem;
+
+    @media only screen and (max-width: $bp-large) { margin-bottom: 6rem; }
+    @media only screen and (max-width: $bp-medium) { margin-bottom: 4rem; }
+    @media only screen and (max-width: $bp-small) { margin-bottom: 2rem; }
+    @media only screen and (max-width: $bp-smallest) { margin-bottom: 1rem; }
+}
+.u-margin-bottom-big {
+    margin-bottom: 8rem;
+
+    @media only screen and (max-width: $bp-large) { margin-bottom: 4rem; }
+    @media only screen and (max-width: $bp-medium) { margin-bottom: 3rem; }
+    @media only screen and (max-width: $bp-small) { margin-bottom: 2rem; }
+    @media only screen and (max-width: $bp-smallest) { margin-bottom: 1rem; }
+}
+.u-margin-bottom-medium {
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-large) { margin-bottom: 3rem; }
+    @media only screen and (max-width: $bp-medium) { margin-bottom: 2rem; }
+    @media only screen and (max-width: $bp-small) { margin-bottom: 1rem; }
+}
+.u-margin-bottom-small {
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-large) { margin-bottom: 1rem; }
+}
+
+.u-margin-top-huge {
+    margin-top: 10rem;
+
+    @media only screen and (max-width: $bp-large) { margin-top: 6rem; }
+    @media only screen and (max-width: $bp-medium) { margin-top: 4rem; }
+    @media only screen and (max-width: $bp-small) { margin-top: 2rem; }
+    @media only screen and (max-width: $bp-smallest) { margin-top: 1rem; }
+}
+.u-margin-top-big {
+    margin-top: 8rem;
+
+    @media only screen and (max-width: $bp-large) { margin-top: 4rem; }
+    @media only screen and (max-width: $bp-medium) { margin-top: 3rem; }
+    @media only screen and (max-width: $bp-small) { margin-top: 2rem; }
+    @media only screen and (max-width: $bp-smallest) { margin-top: 1rem; }
+}
+.u-margin-top-medium {
+    margin-top: 4rem;
+
+    @media only screen and (max-width: $bp-large) { margin-top: 3rem; }
+    @media only screen and (max-width: $bp-medium) { margin-top: 2rem; }
+    @media only screen and (max-width: $bp-small) { margin-top: 1rem; }
+}
+.u-margin-top-small {
+    margin-top: 2rem;
+
+    @media only screen and (max-width: $bp-large) { margin-top: 1rem; }
+}

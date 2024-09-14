@@ -1,0 +1,163 @@
+.about-us-swiper {
+    position: relative;
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 95rem;
+    justify-self: center;
+
+    @media only screen and (max-width: $bp-large) {
+        width: 64rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+        width: 33rem;
+    }
+}
+
+/* ==================== SLIDER ==================== */
+.swiper {
+    width: 100%;
+
+    &__card-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 40rem;
+
+        border-radius: 8px;
+
+        list-style: none;
+        background-color: $color-white;
+    }
+
+    &__img-box {
+        position: relative;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        width: 30rem;
+        height: 30rem;
+
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: $color-main-thame-yellow;
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 25rem;
+            height: 25rem;
+        }
+    }
+
+    &__img{
+        width: 27rem;
+        height: 27rem;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 8px solid $color-white;
+        
+        transition: all .2s ease;
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 23rem;
+            height: 23rem;
+        }
+    }
+    
+    &__img-box:hover &__img{
+        border: 0px solid transparent;
+    }
+
+    &__git-img-box{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    &__git-icon {
+        color: $color-black;
+        font-size: $font-size-xxl;
+        border-radius: 50%;
+        background-color: $color-white;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 5px $color-white;
+
+            transition: all 0.2s ease;
+        }
+
+        &:hover  {
+            &::after{
+                box-shadow: inset 0 0 0 5px $color-black;
+            }
+        }
+    }
+    
+    &__member-name {
+        font-weight: 500;
+        font-size: $font-size-m;
+        margin: 1rem 0 0.5rem;
+    }
+
+    &__member-description {
+        color: $color-gray-1;
+        font-size: $font-size-xs;
+    }
+}
+
+.swiper-pagination {
+    position: absolute;
+    top: 10rem;
+
+    .swiper-pagination-bullet {
+        height: 7px;
+        width: 26px;
+        border-radius: 25px;
+        background: $color-black;
+    }
+}
+
+.swiper-button-next, .swiper-button-prev {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    
+    &::after {
+        color: $color-black;
+        font-size: 20px;
+    }
+
+    &:hover {
+        opacity: 1;
+        color: $color-main-thame-yellow;
+    }
+}
+
+.swiper-button-next {
+    transform: translate(6rem, -3rem);
+    
+    @media only screen and (max-width: $bp-smallest) {
+        transform: translate(1rem, -3rem);
+    }
+}
+
+.swiper-button-prev {
+    transform: translate(-6rem, -3rem);
+
+    @media only screen and (max-width: $bp-smallest) {
+        transform: translate(-1rem, -3rem);
+    }
+}

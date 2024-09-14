@@ -18,6 +18,9 @@ export default defineConfig({
                 'resources/scss/worksPagesSCSS/trillo/app.scss', 
                 // Project - Nexter:
                 'resources/scss/worksPagesSCSS/nexter/app.scss', 
+                // Project - v-project:
+                'resources/scss/worksPagesSCSS/v-project/app.scss',
+                'resources/js/works/v-project/main.js',
             ],
             refresh: true,
         }),

@@ -1,0 +1,43 @@
+.card-about-us{
+    display: flex;
+
+    width: 65%;
+
+    @include auto-margin-left-right;
+    padding-top: 5rem;
+    font-family: $font-2;
+
+    @media only screen and (max-width: $bp-large) {
+        width: 95%;
+    }
+
+    &__container {
+        position: relative;
+        display: grid;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__title {
+        @include center-text;
+        @include title;
+    }
+
+    &__subtitle {
+        @include center-text;
+        @include subtitle;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: $font-size-s;
+        }
+
+        &__text{
+            display: inline;
+            border-bottom: 3px solid $color-black;
+
+            @media only screen and (max-width: $bp-medium) {
+                border-bottom: 2px solid $color-black;
+            }
+        }
+    }
+}

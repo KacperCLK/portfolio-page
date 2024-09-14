@@ -1,28 +1,3 @@
-// .skills-page-bg-img {
-//     position: absolute;
-//     height: 100%;
-//     width: 100%;
-//     top: 0;
-//     left: 0;
-
-//     z-index: 0;
-    
-//     &::before{
-//         content: '';
-//         position: absolute;
-//         top: 0rem;
-//         left: 0rem;
-//         right: 0rem;
-//         bottom: -6rem;
-//         background-image: url('/public/storage/photos/skills-background2.jpg');
-//         filter: blur(5px);
-//         background-size: cover;
-//         background-position: center;
-//         background-repeat: no-repeat;
-//         opacity: 0.3;
-//     }
-// }
-
 .skills-page {
     display: grid;
     grid-template-columns: repeat(3, 33.3%);
@@ -127,6 +102,10 @@
         background-color: $color-very-light-grey;
         border-radius: 5px;
         overflow: hidden;
+
+        @media only screen and (max-width: $bp-large) {
+            background-color: $color-white;
+        }
 
         @media only screen and (max-width: $bp-medium-small) {
             height: 1.2rem;

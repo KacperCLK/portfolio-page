@@ -1,0 +1,41 @@
+@mixin center-text{
+    display: block;
+    text-align: center;
+}
+
+@mixin title {
+    font-weight: 600;
+    color: $color-main-thame-yellow;
+    font-size: $font-size-xxl;
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: $font-size-xl; 
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: $font-size-l; 
+    }
+}
+
+@mixin subtitle {
+    font-weight: 600;
+    color: $color-black;
+    font-size: $font-size-m;
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: $font-size-s; 
+    }
+}
+
+@mixin auto-margin-left-right {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

@@ -2,6 +2,8 @@
 @import 'footer';
 
 .mobile-layout {
+    position: relative;
+
     &__container {
         display: flex;
         background-color: $color-layout-blue;
@@ -12,8 +14,7 @@
         position: relative;
         display: grid;
         
-        width: 90%;
-        margin: 3% 5%;
+        width: 100%;
 
         font-size: $font-size-s;
         background-color: $color-white;
@@ -56,5 +57,24 @@
                 clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
             }  
         }
+    }
+
+    &__scroll-up-btn{
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+
+        z-index: 100;
+        width: 5rem;
+        height: 5rem;
+
+        font-size: $font-size-m;
+        color: $color-white;
+        background-color: $color-grey;
+        border: none;
+        border-radius: 50%;
+
+        cursor: pointer;
+        display: none;
     }
 }

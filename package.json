@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "asynckit": "^0.4.0",
+    "bootstrap": "^5.3.3",
     "combined-stream": "^1.0.8",
     "delayed-stream": "^1.0.0",
     "esbuild": "^0.21.5",
@@ -36,6 +37,7 @@
     "proxy-from-env": "^1.1.0",
     "rollup": "^4.20.0",
     "source-map-js": "^1.2.0",
+    "swiper": "^11.1.14",
     "vite-plugin-full-reload": "^1.2.0"
   },
   "author": "",

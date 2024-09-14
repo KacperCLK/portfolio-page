@@ -1,0 +1,76 @@
+.card-offers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $card-width;
+
+    @include auto-margin-left-right;
+    padding-top: 5rem;
+
+    font-family: $font-2;
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 90%; 
+    }
+
+    &__title {
+        @include center-text;
+        @include title;
+
+        text-decoration: underline;
+    }
+
+    &__subtitle {
+        @include center-text;
+        @include subtitle;
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: $font-size-s;
+        }
+    }
+
+    &__table {
+        max-width: 800px;
+        width: 100%;
+        @include auto-margin-left-right;
+
+        font-family: $font-1;
+
+        & th,
+        & td {
+            border: none;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 400;
+            font-size: $font-size-s;
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: $font-size-xs;
+            }
+        }
+
+        & thead {
+            th {
+                color: $color-blue-1;
+                font-weight: 600;
+            }
+        }
+
+        & tbody {
+            tr {
+                &:not(:last-child){
+                    border-bottom: 2px solid $color-black;
+                }
+
+                th {
+                    width: 50%;
+                }
+                
+                td {
+                    border-left: 2px solid $color-black;
+                    width: 25%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.our-works {
+    width: 90%;
+    @include auto-margin-left-right;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
+
+    padding-top: 5rem;
+
+    font-family: $font-2;
+
+    @media only screen and (max-width: $bp-largest) {
+        width: $card-width;
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        width: 95%; 
+    }
+
+    &__title {
+        @include center-text;
+        @include title;
+
+        grid-column: 1 / -1;
+    }
+
+    &__iframe-container{
+        position: relative;
+        display: block;
+        height: 45rem;
+
+
+        transition: all .2s ease;
+
+        iframe {
+            width: 100%;
+            height: 85%;
+            box-shadow: 0 0 1rem rgba($color: $color-black, $alpha: 0.5);
+            transition: all .2s ease;
+        }
+
+        &:hover iframe{
+            transform: scale(1.05);
+        }
+    }
+
+    &__iframe-container:hover &__btn{
+        visibility: visible;
+        transition: all .6s ease;
+        opacity: 1;
+        top: 90%;
+
+        @media only screen and (max-width: $bp-largest) {
+            top: 70%;
+            right: 2rem;
+        }
+    }
+
+    &__btn{
+        visibility: hidden;
+        opacity: 0;
+
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 90%;
+
+        width: 100%;
+        height: 10%;
+
+        border: none;
+        border-radius: 1rem;
+
+        cursor: pointer;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $font-size-s;
+        background-color: $color-main-thame-yellow;
+
+        transition: all .2s ease;
+
+        @media only screen and (max-width: $bp-largest) {
+            visibility: visible;
+            opacity: 1;
+
+            top: 70%;
+            right: 2rem;
+
+            width: auto;
+            height: auto;
+            padding: 1rem 2rem;
+
+            box-shadow: 0 0 1rem rgba($color: $color-black, $alpha: 0.75);
+
+            transition: all .2s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

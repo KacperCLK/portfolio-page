@@ -1,0 +1,61 @@
+.footer {
+    font-family: 'Kode Mono', monospace;
+    background-color: $color-main-thame-dark;
+
+    &__links {
+        padding: 4rem 0;
+        font-size: $font-size-s;
+        text-align: center;
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 1.5rem 0;
+        }
+    }
+
+    &__icons {
+        display: grid;
+        justify-content: center;
+        grid-auto-flow: column;
+        gap: 10rem;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: block;
+        align-items: center;
+        margin: 4rem 0 0 0;
+        
+        list-style: none;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 0;
+        }
+
+        &--unrolled {
+            display: flex;
+        }
+    }
+    
+    &__item {
+        display: inline-block;
+        margin-right: 3rem;
+    }
+
+    &__legal-disclaimer{
+        padding: 1rem;
+        width: 100%;
+
+        text-align: center;
+
+        font-size: $font-size-s;
+        color: $color-white;
+        background-color: $color-main-thame-dark-2;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-xs;
+        }
+    }
+}

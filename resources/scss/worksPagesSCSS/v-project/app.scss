@@ -1,0 +1,26 @@
+@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'swiper/css/bundle';
+
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/utilities';
+
+@import 'components/bootstrap-carousel';
+@import 'components/buttons';
+@import 'components/card-about-us';
+@import 'components/card-contact';
+@import 'components/card-home';
+@import 'components/card-offers';
+@import 'components/card-our-works';
+@import 'components/custom-slider-1';
+@import 'components/customer-msg';
+@import 'components/icons';
+
+@import 'layout/footer';
+@import 'layout/grid';
+@import 'layout/header';
+
+@import 'pages/home';

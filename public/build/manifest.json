@@ -1,7 +1,15 @@
 {
+  "_bootstrap.esm-DjqAP4LX.js": {
+    "file": "assets/bootstrap.esm-DjqAP4LX.js",
+    "name": "bootstrap.esm"
+  },
   "public/storage/photos/contact-background.jpg": {
     "file": "assets/contact-background-Ad4x3TXr.jpg",
     "src": "public/storage/photos/contact-background.jpg"
+  },
+  "public/storage/photos/works-page/natours/nat-5.jpg": {
+    "file": "assets/nat-5-ChjGwgv6.jpg",
+    "src": "public/storage/photos/works-page/natours/nat-5.jpg"
   },
   "resources/css/app.css": {
     "file": "assets/app-l0sNRNKZ.js",
@@ -16,18 +24,30 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-XN6ObUGq.js",
+    "file": "assets/app-DIEJH3Z5.js",
     "name": "app",
     "src": "resources/js/app.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.esm-DjqAP4LX.js"
+    ]
+  },
+  "resources/js/works/v-project/main.js": {
+    "file": "assets/main-Df5kjDsc.js",
+    "name": "main",
+    "src": "resources/js/works/v-project/main.js",
+    "isEntry": true,
+    "imports": [
+      "_bootstrap.esm-DjqAP4LX.js"
+    ]
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-D6TcoUSS.css",
+    "file": "assets/app-rW_5YCHp.css",
     "src": "resources/scss/app.scss",
     "isEntry": true
   },
   "resources/scss/worksPagesSCSS/natours/app.scss": {
-    "file": "assets/app-Bi-outcV.css",
+    "file": "assets/app-TSuZymsw.css",
     "src": "resources/scss/worksPagesSCSS/natours/app.scss",
     "isEntry": true
   },
@@ -39,6 +59,11 @@
   "resources/scss/worksPagesSCSS/trillo/app.scss": {
     "file": "assets/app-yv8ZP8Pa.css",
     "src": "resources/scss/worksPagesSCSS/trillo/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/worksPagesSCSS/v-project/app.scss": {
+    "file": "assets/app-BSR4t-Gt.css",
+    "src": "resources/scss/worksPagesSCSS/v-project/app.scss",
     "isEntry": true
   }
 }

@@ -26,7 +26,9 @@
         </div>
         
     </div>
-    
+
+    <button class="mobile-layout__scroll-up-btn" id="scrollToTopBtn"><i class="fa-solid fa-angle-up"></i></button>
+
     @livewireScripts
 </body>
 

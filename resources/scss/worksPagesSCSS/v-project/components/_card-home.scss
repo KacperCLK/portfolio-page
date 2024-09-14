@@ -1,0 +1,102 @@
+.card-home{
+    position: relative;
+    width: $card-width;
+    height: $card-height;
+    
+    margin: 5rem auto 0 auto;
+
+    overflow: hidden;
+    border-radius: 25px;
+    font-family: $font-1;
+
+    @media only screen and (max-width: $bp-large) {
+        width: 100%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        height: $card-height-small;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        height: $card-height-smallest;
+    }
+
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        background-color: rgba($color: $color-black, $alpha: 0.7);
+    }
+
+    &__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        font-family: $font-2;
+    }
+
+    &__title {
+        @include center-text;
+        @include title;
+    }
+
+    &__subtitle {
+        @include center-text;
+        @include subtitle;
+
+        color: $color-white;
+    
+
+        &__text{
+            display: inline;
+            border-bottom: 3px solid $color-white;
+
+            @media only screen and (max-width: $bp-medium) {
+                border-bottom: 2px solid $color-white;
+            }
+        }
+    }
+
+    &__description{
+        @include center-text;
+    }
+
+    &__text{
+        font-family: $font-1;
+        color: $color-white;
+        font-size: $font-size-m;
+        font-weight: 300;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: $font-size-s; 
+        }
+        
+        &--bold{
+            font-weight: 400;
+        }
+
+        &--yellow{
+            font-weight: 400;
+            color: $color-main-thame-yellow;
+        }
+    }
+
+    &__link{
+        color: $color-blue-1;
+        text-decoration: none;
+
+        transition: all 0.2s;
+
+        &:hover{
+            color: $color-blue-2;
+        }
+    }
+}

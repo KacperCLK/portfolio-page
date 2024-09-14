@@ -1,0 +1,96 @@
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    column-gap: 5rem;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 7rem;
+    font-family: $font-2;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: min-content;
+        row-gap: 3rem;
+        padding-top: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        position: relative;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: 100%;
+        padding-top: 7rem;
+    }
+
+    &__card {
+        width: 55rem;
+
+        box-shadow: 0px 0px 1rem $color-gray-2;
+        border-radius: 20px;
+        padding: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            position: relative;
+            width: 100%;
+            box-shadow: none;
+            border-radius: 0;
+        }
+    }
+
+    &__contat-us-box {
+        padding: 2rem
+    }
+
+    &__title {
+        @include title;
+        font-size: $font-size-l;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-m;
+        }
+    }
+
+    &__text {
+        font-size: $font-size-s;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 8rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-s;
+            margin-bottom: 4.5rem;
+        }
+    }
+
+    &__links{
+        display: grid;
+        gap: 3rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0 3rem;
+            grid-template-columns: repeat(2, min-content);
+            justify-content: space-between;;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+
+            grid-template-columns: min-content;
+            gap: 1rem;
+
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+
+            padding: 0;
+        }
+    }
+}

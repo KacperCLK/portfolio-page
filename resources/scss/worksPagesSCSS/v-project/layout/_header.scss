@@ -1,0 +1,146 @@
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; 
+    height: $header-hight;
+    min-width: 40rem;
+    z-index: 100;
+
+    font-family: $font-1;
+    background-color: $color-main-thame-dark;
+
+    &__left,
+    &__right,
+    &__hidden {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: $font-size-xs;
+    }
+    
+    &__left{
+        position: relative;
+        float: left;
+        margin-left: 6rem;
+        font-weight: 700;
+        font-size: $font-size-s;
+        
+        z-index: 100;
+        background-color: $color-main-thame-dark;
+        
+        .link-main {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        img {
+            height: $font-size-s*1.5;
+        }
+    }
+
+    &__right{
+        float: right;
+
+        @media only screen and (max-width: $bp-small) { 
+            display: none;
+        }
+    }
+
+    &__hidden {
+        position: absolute;
+        top: 6rem;
+        left: 0;
+
+        width: 100%;
+        height: 0;
+    }
+
+    &__hidden &__list {
+        position: absolute;
+        top: -30rem;
+        padding: 0;
+        display: block;
+        width: 100%;
+        background-color: $color-main-thame-dark;
+
+        transition: all 0.7s;
+    }
+
+    &__hidden &__item {
+        margin-left: 6rem;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        
+        list-style: none;
+
+        &--unrolled {
+            display: flex;
+        }
+    }
+    
+    &__item {
+        display: inline-block;
+        margin-right: 3rem;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__toggle-button{
+        &,
+        &:link,
+        &:visited{
+            display: inline-block;
+            position: absolute;
+            top: 1rem;
+            right: 3rem;
+            z-index: 100;
+
+            padding: 1rem 2rem;
+            border-radius: 100px;
+
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: $color-main-thame-yellow;
+            color: $color-white;
+            font-size: $font-size-xs;
+            font-weight: 700;
+            
+            transition: all 0.2s ease;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 1rem 3rem rgba($color-white, 0.4);
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+
+    // FUNCTIONALITY
+    &__checkbox:checked ~ &__hidden {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__checkbox:checked ~ &__hidden &__list {
+        top: 0;
+    }
+
+    // Hide elements in js:
+    &--unactive {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
