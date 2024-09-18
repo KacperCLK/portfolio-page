@@ -4,9 +4,6 @@ namespace App;
 
 class LinkService
 {
-    /**
-     * Funkcja tworząca linki - używana w kontrolerach
-     */
     public function getLinks($activePage)
     {
         $pages = [

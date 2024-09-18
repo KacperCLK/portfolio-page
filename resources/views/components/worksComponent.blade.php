@@ -12,7 +12,6 @@
     
         <button data-section="all" class="button button--filter-button">All</button>
     </div>
-    
     <div class="works__works-container">
         @foreach ($works as $work)
             <div class="works__work" data-section="{{ $work->section }}">
@@ -20,9 +19,12 @@
                 <div class="works__work-title thickness-600">
                     <span>{{ $work->name }}</span>
                 </div>
-                <a href="{{ route('works.show', ['project_name' => $work->work_url]) }}" class="works__show-details button button--main-button thickness-400">Details</a>
+                @if ($work->sidepage) 
+                    <a href="{{ route('works.show', ['project_name' => $work->work_url]) }}" class="works__show-details button button--main-button thickness-400">Details</a>
+                @else
+                    <a href="{{ $work->work_url }}" class="works__show-details button button--main-button thickness-400">Details</a>
+                @endif
             </div>
         @endforeach
     </div>
-    
-</div>  
+</div>

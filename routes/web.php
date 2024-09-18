@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\TutorialPageController;
 use App\Http\Controllers\WorksPagesController;
 use Illuminate\Support\Facades\Route;
 

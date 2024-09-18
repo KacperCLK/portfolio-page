@@ -3,14 +3,18 @@
         <span class="font-colot-main-blue ">About</span> Me
     </h1>
     <div class="home-page__introduction">
-        {{-- <span>Hi,</span> --}}
         <span>Hi, I'am <span class="font-colot-main-blue thickness-600">Kacper</span></span>
         <span>Constructor Estimator</span>
         <span>BIM Modeller and</span>
         <span>Web Developer</span>
 
+        @php
+            $nameToFind = 'Contact'; 
+            $url = collect($links)->firstWhere('name', $nameToFind)['url'] ?? null;
+        @endphp
+        
         <div class="home-page__link">
-            <a href="{{route('contact')}}" class="link link--button thickness-500">Contact</a>
+            <a href="{{$url}}" class="link link--button thickness-500">Contact</a>
         </div>
     </div>
 

@@ -6,7 +6,7 @@
 @section('content')
     @include('layouts.header')
     <div class="mobile-layout__section mobile-layout__section--1">
-        <x-homeComponent/>
+        <x-homeComponent :links="$links"/>
     </div>
     <div class="mobile-layout__section mobile-layout__section--2">
         <x-skillsComponent :sections="$sections" :skills="$skills"/>

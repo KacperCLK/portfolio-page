@@ -21,6 +21,9 @@ export default defineConfig({
                 // Project - v-project:
                 'resources/scss/worksPagesSCSS/v-project/app.scss',
                 'resources/js/works/v-project/main.js',
+                // Project - mapty:
+                'resources/scss/worksPagesSCSS/mapty/app.scss',
+                'resources/js/works/mapty/main.js',
             ],
             refresh: true,
         }),

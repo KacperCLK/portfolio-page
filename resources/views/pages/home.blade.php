@@ -3,5 +3,5 @@
 @section('title', 'Kacper Celak - Home Page')
 
 @section('content')
-    <x-homeComponent />
+    <x-homeComponent :links="$links"/>
 @endsection
