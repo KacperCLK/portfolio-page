@@ -48,6 +48,12 @@
       "_bootstrap.esm-DjqAP4LX.js"
     ]
   },
+  "resources/js/works/mapty/main.js": {
+    "file": "assets/main-0X-kNWOn.js",
+    "name": "main",
+    "src": "resources/js/works/mapty/main.js",
+    "isEntry": true
+  },
   "resources/js/works/v-project/main.js": {
     "file": "assets/main-Df5kjDsc.js",
     "name": "main",
@@ -60,6 +66,11 @@
   "resources/scss/app.scss": {
     "file": "assets/app-rW_5YCHp.css",
     "src": "resources/scss/app.scss",
+    "isEntry": true
+  },
+  "resources/scss/worksPagesSCSS/mapty/app.scss": {
+    "file": "assets/app-BhV8OZbv.css",
+    "src": "resources/scss/worksPagesSCSS/mapty/app.scss",
     "isEntry": true
   },
   "resources/scss/worksPagesSCSS/natours/app.scss": {
