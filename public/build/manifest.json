@@ -28,13 +28,13 @@
     "src": "public/storage/photos/works-page/natours/nat-7.jpg"
   },
   "resources/css/app.css": {
-    "file": "assets/app-l0sNRNKZ.js",
+    "file": "assets/app-DP2rzg_V.js",
     "name": "app",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/worksPagesCSS/app.css": {
-    "file": "assets/app-DP2rzg_V.js",
+    "file": "assets/app-l0sNRNKZ.js",
     "name": "app",
     "src": "resources/css/worksPagesCSS/app.css",
     "isEntry": true
@@ -64,7 +64,7 @@
     ]
   },
   "resources/scss/app.scss": {
-    "file": "assets/app-DzxI7k1c.css",
+    "file": "assets/app-CDnN32I9.css",
     "src": "resources/scss/app.scss",
     "isEntry": true
   },

@@ -49,7 +49,9 @@
     <button class="form__button button button--main-button" type="submit">Submit</button>
 
     
-    <div class="form__success-message @if (session()->has('success')) form__success-message--active @endif">
+    {{-- <div class="form__success-message @if (session()->has('success')) form__success-message--active @endif"> --}}
+    <div class="form__success-message form__success-message--active">
         {{ session('success') }}
+        Message has been sent succesfully!
     </div>
 </form>
