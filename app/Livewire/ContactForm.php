@@ -21,9 +21,14 @@ class ContactForm extends Component
     {
         $this->validate();
 
-        // Tutaj możesz dodać logikę wysyłania e-maila lub zapisu danych
-        // Na przykład, możesz wysłać e-mail:
-        // Mail::to('admin@example.com')->send(new ContactFormMail($this->name, $this->email, $this->message));
+        Mail::send('emails.contact', [
+            'name' => $this->name,
+            'email' => $this->email,
+            'messageContent' => $this->message, 
+        ], function ($mail) {
+            $mail->to('kacper.celak@gmail.com')
+                 ->subject('New Contact Form Portfolio-Page');
+        });
 
         $this->reset();
 
