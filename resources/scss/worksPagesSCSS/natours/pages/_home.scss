@@ -31,6 +31,10 @@
 
     .row {
         display: flex;
+        
+        @include respond(tab-port) {
+            display: grid;
+        }
     }
 }
 
